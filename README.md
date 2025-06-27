@@ -33,3 +33,17 @@ export OPENAI_API_KEY=your_openai_api_key
 
 Set the `SLURP_FILE` variable in `ai-commit-msg`. Default is `~/tmp/ai-commit-msg.slurp`
 if `~/tmp` exists, otherwise we'll default to `/tmp/ai-commit-msg.slurp`.
+
+## Testing
+
+We use `bats` for testing. Install it with:
+
+```
+brew install bats-core
+```
+
+Run the tests with:
+
+```
+bats test
+```
