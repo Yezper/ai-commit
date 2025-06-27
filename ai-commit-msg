@@ -1,6 +1,12 @@
 #!/bin/bash
 
-SLURP_FILE=~/tmp/ai-commit-slurp.txt
+# Set SLURP_FILE path. Use ~/tmp if it exists, otherwise use /tmp
+if [ -d ~/tmp ]; then
+  SLURP_FILE=~/tmp/ai-commit-msg.slurp
+else
+  SLURP_FILE=/tmp/ai-commit-msg.slurp
+fi
+
 
 # Check if OPENAI_API_KEY is set
 if [ -z "$OPENAI_API_KEY" ]; then
